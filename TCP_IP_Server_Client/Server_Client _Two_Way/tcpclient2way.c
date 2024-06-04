@@ -23,7 +23,7 @@ send(clnsock_fd,message,strlen(message),0);
 if(strcmp(message,"exit")==0)break;
 memset(buffer,0,sizeof(buffer));
 read(clnsock_fd,buffer,1024);
-printf("received data from TCP/IP client:%s\n",buffer);
+printf("received data from TCP/IP server:%s\n",buffer);
 if(strcmp(buffer,"exit")==0)break;
 
 }
