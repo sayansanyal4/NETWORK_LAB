@@ -23,7 +23,7 @@ recvfrom(svrsock_fd,buffer,sizeof(buffer),0,&clnaddr,&clnaddrlen);
 printf("received data from UDP/IP CLIENT:%s\n",buffer);
 if(strcmp(buffer,"exit")==0)break;
 memset(message,0,sizeof(message));
-printf("enter data for UDP/IP server:");
+printf("enter data for UDP/IP client:");
 gets(message);
 sendto(svrsock_fd,message,sizeof(message),0,&clnaddr,clnaddrlen);
 if(strcmp(message,"exit")==0)break;
