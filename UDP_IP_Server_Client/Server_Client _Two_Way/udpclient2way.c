@@ -23,7 +23,7 @@ sendto(clnsock_fd,message,sizeof(message),0,&svraddr,svraddrlen);
 if(strcmp(message,"exit")==0)break;
 memset(buffer,0,sizeof(buffer));
 recvfrom(clnsock_fd,buffer,sizeof(buffer),0,&svraddr,&svraddrlen);
-printf("received data from UDP/IP CLIENT:%s\n",buffer);
+printf("received data from UDP/IP server:%s\n",buffer);
 if(strcmp(buffer,"exit")==0)break;
 }
 }
