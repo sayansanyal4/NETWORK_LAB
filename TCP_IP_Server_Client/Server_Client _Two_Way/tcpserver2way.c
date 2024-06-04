@@ -25,7 +25,7 @@ read(new_conn,buffer,1024);
 printf("received data from TCP/IP client:%s\n",buffer);
 if(strcmp(buffer,"exit")==0)break;
 memset(message,0,sizeof(message));
-printf("enter data for TCP/IP server:");
+printf("enter data for TCP/IP client:");
 gets(message);
 send(new_conn,message,strlen(message),0);
 if(strcmp(message,"exit")==0)break;
